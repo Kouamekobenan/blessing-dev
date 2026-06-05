@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X, ArrowRight } from 'lucide-react';
 import { NAV_LINKS } from '@/constants';
 import { useTheme } from '@/components/ThemeProvider';
+import Image from 'next/image';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,20 +31,21 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 dark:bg-background/95 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_0_rgba(148,163,184,0.08)]'
-          : 'bg-transparent'
+          ? "bg-white/95 dark:bg-background/95 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)] dark:shadow-[0_1px_0_rgba(148,163,184,0.08)]"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-1 group">
-            <span className="text-xl font-bold tracking-tight">
-              <span className="text-pink-500 group-hover:text-pink-400 transition-colors duration-200">B</span>
-              <span className="text-slate-900 dark:text-white">lessingDev</span>
-            </span>
+          <a href="#hero" className="flex bg-pink-200 items-center gap-1 group hover:gap-2 transition-all duration-200 rotate-0 group-hover:rotate-3 p-1.5 rounded-lg">
+            <Image
+              src="/images/img-p.jpeg"
+              alt="BlessingDev"
+              width={62}
+              height={50}
+            />
           </a>
-
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((link) => (
