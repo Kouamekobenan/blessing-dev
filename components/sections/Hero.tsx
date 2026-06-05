@@ -69,7 +69,7 @@ export function Hero() {
               style={{ animationDelay: "0s" }}
             >
               <span className="w-2 h-2 bg-pink-500 dark:bg-pink-400 rounded-full animate-pulse" />
-              Développeur Web &amp; Mobile
+              Développeuse Web &amp; Mobile
             </div>
             {/* Name — shimmer gradient */}
             <h1
